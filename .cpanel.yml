@@ -6,4 +6,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/pcelars5/public_html
     - /bin/cp -R * $DEPLOYPATH
+#    - /bin/cp -r ./public/* $DEPLOYPATH/public_html/
+    - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/js
+    - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/css
 
