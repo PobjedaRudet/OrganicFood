@@ -4,6 +4,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pcelars5/public_html/OrganicFood
+    - export DEPLOYPATH=/home/pcelars5/public_html
     - /bin/cp -R * $DEPLOYPATH
 
