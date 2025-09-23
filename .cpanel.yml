@@ -2,8 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/pcelars5/repositories/OrganicFood
-    - /bin/cp -r * $DEPLOYPATH #copy all from root
-
+    - /bin/cp -R * $DEPLOYPATH
 
 
 
