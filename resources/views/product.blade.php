@@ -52,7 +52,7 @@
                                 <h5 class="card-title mb-2">{{ $product->name }}</h5>
                                 <p class="text-muted mb-1">{{ $product->category }}</p>
                                 <div class="mb-2">
-                                    <span class="text-primary fw-bold fs-5">${{ $product->price }}</span>
+                                    <span class="text-primary fw-bold fs-5">{{ number_format($product->price, 2) }} KM</span>
                                 </div>
                                 <button type="button" class="btn btn-outline-success btn-sm rounded-pill add-to-cart-btn" data-id="{{ $product->id }}"><i class="fa fa-shopping-bag me-1"></i>Add to cart</button>
                                 <a href="{{ route('products.show', $product->id) }}" class="btn btn-outline-primary btn-sm rounded-pill ms-2"><i class="fa fa-eye me-1"></i>View</a>

@@ -12,7 +12,7 @@
             <small class="ms-4"><i class="fa fa-phone-alt me-2"></i>+387 61 540 451</small>
         </div>
         <div class="col-lg-6 px-5 text-end">
-            <small>Follow us:</small>
+            <small>Pratite nas na:</small>
             <a class="text-body ms-3" href="javascript:void(0)"><i class="fab fa-facebook-f"></i></a>
             <a class="text-body ms-3" href="javascript:void(0)"><i class="fab fa-twitter"></i></a>
             <a class="text-body ms-3" href="javascript:void(0)"><i class="fab fa-linkedin-in"></i></a>
@@ -28,11 +28,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
-                <a href="{{ url('/about') }}" class="nav-item nav-link">About Us</a>
-                <a href="{{ url('/product') }}" class="nav-item nav-link">Products</a>
-                <a href="{{ url('/blog') }}" class="nav-item nav-link">News</a>
-                <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact Us</a>
+                <a href="{{ url('/') }}" class="nav-item nav-link active">Početna</a>
+                <a href="{{ url('/about') }}" class="nav-item nav-link">O nama</a>
+                <a href="{{ url('/product') }}" class="nav-item nav-link">Proizvodi</a>
+                <a href="{{ url('/blog') }}" class="nav-item nav-link">Vijesti</a>
+                <a href="{{ url('/contact') }}" class="nav-item nav-link">Kontakt</a>
             </div>
             <div class="d-none d-lg-flex ms-2">
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="#" aria-label="Search">

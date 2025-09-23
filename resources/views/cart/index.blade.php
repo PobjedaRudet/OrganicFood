@@ -28,9 +28,9 @@
                     @endphp
                     <tr>
                         <td>{{ $product ? $product->name : 'Unknown' }}</td>
-                        <td>${{ $product ? number_format($product->price, 2) : '0.00' }}</td>
+                        <td>{{ $product ? number_format($product->price, 2) : '0.00' }} KM</td>
                         <td>{{ $qty }}</td>
-                        <td>${{ number_format($subtotal, 2) }}</td>
+                        <td>{{ number_format($subtotal, 2) }} KM</td>
                         <td>
                             <form action="{{ route('cart.remove', $id) }}" method="POST" style="display:inline-block;">
                                 @csrf
@@ -42,7 +42,7 @@
             </tbody>
         </table>
         <div class="text-end mb-3">
-            <h4>Total: <span class="text-primary">${{ number_format($total, 2) }}</span></h4>
+            <h4>Total: <span class="text-primary">{{ number_format($total, 2) }} KM</span></h4>
         </div>
         <div class="text-end">
            <a href="{{ route('order') }}" class="btn btn-success btn-lg rounded-pill">Naruči</a>
