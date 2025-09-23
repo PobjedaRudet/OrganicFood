@@ -9,8 +9,4 @@ deployment:
     # Kopiraj samo sadržaj public/ u public_html
     - /bin/cp -R $PROJECTPATH/public/* $DEPLOYPATH/
 
-    # Opcionalno: kopiraj vendor i .env fajl u projekat ako nemaš SSH i Composer
-    - /bin/cp -R $PROJECTPATH/vendor $PROJECTPATH/vendor
-    - /bin/cp $PROJECTPATH/.env $PROJECTPATH/.env
-
 
