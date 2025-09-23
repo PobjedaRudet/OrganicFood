@@ -8,8 +8,8 @@
 <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
     <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
         <div class="col-lg-6 px-5 text-start">
-            <small><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-            <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@example.com</small>
+            <small><i class="fa fa-map-marker-alt me-2"></i>Kopači, Novo Goražde, Bosna i Hercegovina</small>
+            <small class="ms-4"><i class="fa fa-phone-alt me-2"></i>+387 61 540 451</small>
         </div>
         <div class="col-lg-6 px-5 text-end">
             <small>Follow us:</small>
@@ -21,7 +21,7 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <a href="{{ url('/') }}" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="fw-bold text-primary m-0">F<span class="text-secondary">oo</span>dy</h1>
+            <h1 class="fw-bold text-primary m-0">Porodično<span class="text-secondary"> pčelarstvo</span> Kanlić</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -31,15 +31,7 @@
                 <a href="{{ url('/') }}" class="nav-item nav-link active">Home</a>
                 <a href="{{ url('/about') }}" class="nav-item nav-link">About Us</a>
                 <a href="{{ url('/product') }}" class="nav-item nav-link">Products</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="{{ url('/blog') }}" class="dropdown-item">Blog Grid</a>
-                        <a href="{{ url('/feature') }}" class="dropdown-item">Our Features</a>
-                        <a href="{{ url('/testimonial') }}" class="dropdown-item">Testimonial</a>
-                        <a href="{{ url('/404') }}" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
+                <a href="{{ url('/blog') }}" class="nav-item nav-link">News</a>
                 <a href="{{ url('/contact') }}" class="nav-item nav-link">Contact Us</a>
             </div>
             <div class="d-none d-lg-flex ms-2">
@@ -61,6 +53,19 @@
     </nav>
 </div>
 <!-- Navbar End -->
+
+<!-- Responsive typography for small devices -->
+<style>
+@media (max-width: 576px) {
+    .navbar-brand h1 { font-size: 1.75rem; }
+    .navbar-nav .nav-link { font-size: 1.05rem; line-height: 1.4; }
+    .dropdown-menu .dropdown-item { font-size: 1rem; }
+    .btn-sm-square small { font-size: 1rem; }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar-nav .nav-link { font-size: 1rem; }
+}
+</style>
 
 <!-- Chatbot Widget Start -->
 <style>

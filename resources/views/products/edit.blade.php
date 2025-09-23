@@ -2,7 +2,7 @@
 @include('partials.menu')
 <div class="container mt-5">
     <h1>Edit Product</h1>
-    <form action="{{ route('products.update', $product) }}" method="POST">
+    <form action="{{ route('products.update', $product) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -22,8 +22,9 @@
             <input type="text" name="category" id="category" class="form-control" value="{{ old('category', $product->category) }}">
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label">Image URL</label>
-            <input type="text" name="image" id="image" class="form-control" value="{{ old('image', $product->image) }}">
+            <label for="image_file" class="form-label">Upload New Image</label>
+            <input type="file" name="image_file" id="image_file" class="form-control" accept="image/*">
+            <small class="text-muted">Supported: JPG, PNG, WEBP, GIF. Max 4MB.</small>
         </div>
         <button type="submit" class="btn btn-success">Update</button>
         <a href="{{ route('products.index') }}" class="btn btn-secondary">Back</a>

@@ -21,7 +21,18 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {
-        $product = Product::create($request->validated());
+        $data = $request->validated();
+
+        // If an image file is uploaded, store it under public/uploads/products and save the relative path
+        if ($request->hasFile('image_file')) {
+            $file = $request->file('image_file');
+            $safeName = time().'_'.preg_replace('/[^A-Za-z0-9_\.\-]/', '_', $file->getClientOriginalName());
+            $path = $file->move(public_path('uploads/products'), $safeName);
+            // Save relative path from public directory
+            $data['image'] = 'uploads/products/'.$safeName;
+        }
+
+        $product = Product::create($data);
         return redirect()->route('products.index')->with('success', 'Product created successfully.');
     }
 
@@ -37,7 +48,16 @@ class ProductController extends Controller
 
     public function update(ProductRequest $request, Product $product)
     {
-        $product->update($request->validated());
+        $data = $request->validated();
+
+        if ($request->hasFile('image_file')) {
+            $file = $request->file('image_file');
+            $safeName = time().'_'.preg_replace('/[^A-Za-z0-9_\.\-]/', '_', $file->getClientOriginalName());
+            $file->move(public_path('uploads/products'), $safeName);
+            $data['image'] = 'uploads/products/'.$safeName;
+        }
+
+        $product->update($data);
         return redirect()->route('products.index')->with('success', 'Product updated successfully.');
     }
 

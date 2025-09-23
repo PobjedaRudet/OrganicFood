@@ -8,14 +8,25 @@ use Laravel\Mcp\Facades\Mcp;
 use App\Mcp\Servers\OrderServer;
 
 Route::get('/', function () {
-    return view('welcome');
+     $products = Product::all();
+    return view('welcome', compact('products'));
 });
+
+
+Route::view('/about', 'about')->name('about');
+
+Route::view('/contact', 'contact')->name('contact');
+
+Route::view('/feature', 'features.feature')->name('feature');
 
 
 Route::get('/product', function () {
     $products = Product::all();
     return view('product', compact('products'));
 });
+
+// Blog page
+Route::view('/blog', 'blog')->name('blog');
 
 Route::resource('products', ProductController::class);
 

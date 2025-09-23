@@ -11,7 +11,7 @@ class ProductRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class ProductRequest extends FormRequest
                 'name' => 'required|string|max:255',
                 'description' => 'nullable|string',
                 'price' => 'required|numeric|min:0',
-                'image' => 'nullable|string|max:255',
+                'image_file' => 'nullable|file|image|mimes:jpg,jpeg,png,webp,gif|max:4096',
                 'category' => 'nullable|string|max:255',
             ];
     }
