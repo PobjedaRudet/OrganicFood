@@ -4,7 +4,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pcelars5/public_html
+    - export DEPLOYPATH=/home/pcelars5/public_html/webshop.pcelarstvokanlic.ba
     - /bin/cp -R * $DEPLOYPATH
 
 
