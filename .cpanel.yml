@@ -1,9 +1,11 @@
+##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO ######
+#/home/pobjeda/repositories/rudet_norme
+#https://pobjeda.com:2083/cpsess9724415117/frontend/jupiter/filemanager/index.html?dir=%2Fhome%2Fpobjeda%2Fpublic_html%2Fnorme.pobjeda.com
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pcelars5/repositories/OrganicFood
+    - export DEPLOYPATH=/home/pcelars5/public_html
     - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp -R ./public/* /home/pcelars5/public_html/
 
 
 
