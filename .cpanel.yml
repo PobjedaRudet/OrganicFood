@@ -6,7 +6,5 @@ deployment:
     # Folder web servera (public_html)
     - export DEPLOYPATH=/home/pcelars5/public_html
 
-    # Kopiraj samo sadržaj public/ u public_html
-    - /bin/cp -R $PROJECTPATH/public/* $DEPLOYPATH/
 
 
