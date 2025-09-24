@@ -1,4 +1,10 @@
 
+<!-- Meta & Basic Head Tags -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+
 <!-- Favicon -->
 <link href="{{ asset('img/favicon.ico') }}" rel="icon">
 
@@ -21,6 +27,36 @@
 <!-- Template Stylesheet -->
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
+<!-- Mobile Menu Tweaks -->
+<style>
+	/* Veći tap-area i čitljivost na telefonima */
+	@media (max-width: 575.98px) {
+		.navbar-brand h1 { font-size: 1.55rem; line-height: 1.15; }
+		.navbar .navbar-nav .nav-link {
+			font-size: 1.12rem;
+			padding: 14px 0 !important; /* povećaj visinu za lakši dodir */
+		}
+		.navbar-toggler {
+			padding: .65rem .8rem;
+			font-size: 1.25rem;
+			border: 2px solid rgba(0,0,0,.15);
+		}
+		.navbar-toggler:focus { box-shadow: 0 0 0 .15rem rgba(60,184,21,.35); }
+		/* Povećaj ikonu burgera (dodamo custom background ako default mala) */
+		.navbar-light .navbar-toggler-icon {
+			width: 1.55em; height: 1.55em;
+			background-size: 100% 100%;
+		}
+		/* Osiguraj da collapsed container ima malo više zraka */
+		#navbarCollapse { padding: .35rem 0 .75rem; }
+	}
+
+	/* Blagi boost za small tablete */
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		.navbar .navbar-nav .nav-link { font-size: 1.05rem; }
+	}
+</style>
+
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -32,3 +68,10 @@
 
 <!-- Template Javascript -->
 <script src="{{ asset('js/main.js') }}"></script>
+
+<!-- Helper: Add class on body when JS ready (može pomoći ako želimo progresivno poboljšanje) -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	document.documentElement.classList.add('js-ready');
+});
+</script>

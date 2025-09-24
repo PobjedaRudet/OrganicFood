@@ -54,18 +54,7 @@
 </div>
 <!-- Navbar End -->
 
-<!-- Responsive typography for small devices -->
-<style>
-@media (max-width: 576px) {
-    .navbar-brand h1 { font-size: 1.75rem; }
-    .navbar-nav .nav-link { font-size: 1.05rem; line-height: 1.4; }
-    .dropdown-menu .dropdown-item { font-size: 1rem; }
-    .btn-sm-square small { font-size: 1rem; }
-}
-@media (min-width: 577px) and (max-width: 768px) {
-    .navbar-nav .nav-link { font-size: 1rem; }
-}
-</style>
+<!-- (Uklonjeno dupliranje mobilnih tipografskih stilova – sada je sve centralizovano u <head>) -->
 
 <!-- Chatbot Widget Start -->
 <style>
